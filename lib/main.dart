@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/screens/show_photo_page.dart';
+import 'package:gallery_app/screens/show_select_photo.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       home: MyHome(),
       routes: {
         '/showGallery': (context) => const ShowGallery(),
+        '/showSelectPhoto': (context) => const SelectPhotoPage(),
       },
     );
   }
@@ -30,12 +32,23 @@ class MyHome extends StatelessWidget {
         title: const Text("Show Gallery"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () async {
-            PhotoManager.getAssetPathList();
-            Navigator.pushNamed(context, '/showGallery');
-          },
-          child: const Text("Open Gallery"),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () async {
+                PhotoManager.getAssetPathList();
+                Navigator.pushNamed(context, '/showGallery');
+              },
+              child: const Text("Open Gallery"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                PhotoManager.getAssetPathList();
+                Navigator.pushNamed(context, '/showSelectPhoto');
+              },
+              child: const Text("Open Select Photo"),
+            ),
+          ],
         ),
       ),
     );
