@@ -1,6 +1,27 @@
-# gallery_app
+# image_app
 
 A new Flutter project.
+
+## Note
+
+To run this project firstly already have flutter sdk, android studio install in local machine,secondly have set up android virtual device
+
+Then clone this project
+
+```bash
+git clone https://github.com/maxpham97/demo-gallery-app.git
+```
+
+After clone run
+```bash 
+flutter pub get
+```
+in terminal to get all dependencies
+
+then run
+```bash
+flutter run
+```
 
 ## Getting Started
 
