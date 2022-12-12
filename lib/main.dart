@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gallery_app/screens/paint_page.dart';
 import 'package:gallery_app/screens/show_select_photo.dart';
 import 'package:photo_manager/photo_manager.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: MyHome(),
+      home: ExamplePage(),
       routes: {
         '/showSelectPhoto': (context) => const SelectPhotoPage(),
       },
