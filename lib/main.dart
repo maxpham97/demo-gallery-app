@@ -32,13 +32,21 @@ class MyHome extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            Spacer(),
             ElevatedButton(
               onPressed: () async {
                 PhotoManager.getAssetPathList();
+                final PermissionState _ps =
+                    await PhotoManager.requestPermissionExtend();
+                // if (_ps.isAuth) {
                 Navigator.pushNamed(context, '/showSelectPhoto');
+                // } else {
+                //   print(_ps.isAuth);
+                // }
               },
               child: const Text("Open Select Photo"),
             ),
+            Spacer(),
           ],
         ),
       ),
